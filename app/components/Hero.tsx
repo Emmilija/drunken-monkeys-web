@@ -1,20 +1,29 @@
+import Image from "next/image";
+import logo from "../assets/images/logo.jpg";
+
 export default function Hero() {
   return (
     <section className="min-h-[80vh] flex items-center justify-center bg-black text-white px-6">
-      
       <div className="text-center max-w-2xl">
-        
-        {/* Title */}
+
         <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-         Drunken Monkeys 
+          Drunken Monkeys
         </h1>
 
-        {/* Subtitle */}
+        <div className="flex justify-center mt-6">
+          <Image
+            src={logo}
+            alt="Drunken Monkeys Logo"
+            width={120}
+            height={120}
+            className="rounded-full"
+          />
+        </div>
+
         <p className="text-gray-400 mt-6 text-lg">
           British Bar, cocktails and food experience in center of Skopje.
         </p>
 
-        {/* Buttons */}
         <div className="mt-8 flex gap-4 justify-center">
           <a
             href="/menu"
@@ -22,12 +31,9 @@ export default function Hero() {
           >
             View Menu
           </a>
-
-       
         </div>
 
       </div>
-
     </section>
   );
 }

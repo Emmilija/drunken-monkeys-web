@@ -23,12 +23,12 @@ const handleSubmit = async (e: React.FormEvent) => {
   setLoading(true);
 
  try {
-  await emailjs.send(
-    "service_d99iabl",   
-    "template_ks9vvxu",  
-    form,              
-    "OWJE_Hvry6TmOY9PE"    
-  );
+ await emailjs.send(
+  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+  form,
+  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+);
 
   alert("Reservation sent successfully!");
 
