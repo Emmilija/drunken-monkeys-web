@@ -15,7 +15,7 @@ export default function MenuCard() {
   const [active, setActive] = useState("Coffee");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black text-white px-6 py-16">
+    <div className="min-h-screen bg-linear-to-b from-black via-zinc-950 to-black text-white px-6 py-16">
       {/* HEADER */}
       <div className="text-center mb-10">
         <h1 className="text-5xl md:text-7xl font-bold tracking-[0.25em]">

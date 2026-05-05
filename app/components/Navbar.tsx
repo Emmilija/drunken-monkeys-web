@@ -23,8 +23,8 @@ export default function Navbar() {
           <Link href="/menu" className="hover:text-gray-300">
             Menu
           </Link>
-          <Link href="/about" className="hover:text-gray-300">
-            About
+          <Link href="/reservation" className="hover:text-gray-300">
+            Reservation
           </Link>
         </div>
 
@@ -46,8 +46,8 @@ export default function Navbar() {
           <Link href="/menu" onClick={() => setOpen(false)}>
             Menu
           </Link>
-          <Link href="/about" onClick={() => setOpen(false)}>
-            About
+          <Link href="/reservation" onClick={() => setOpen(false)}>
+            Reservation
           </Link>
         </div>
       )}
