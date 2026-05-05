@@ -20,6 +20,7 @@ export default function ReservationForm() {
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setLoading(true);
+  
 
  try {
   const templateParams = {
@@ -41,6 +42,11 @@ const handleSubmit = async (e: React.FormEvent) => {
 } catch (error) {
   console.error(error);
   alert("Something went wrong.");
+  console.log("ENV CHECK:", {
+  service: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+  template: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  key: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+});
 }
 
 setLoading(false);
