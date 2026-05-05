@@ -22,18 +22,24 @@ const handleSubmit = async (e: React.FormEvent) => {
   setLoading(true);
 
  try {
- await emailjs.send(
-  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-  form,
-  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-);
+  const templateParams = {
+    name: form.name,
+    email: form.email,
+    date: form.date,
+    guests: form.guests,
+    message: form.message,
+  };
+
+  await emailjs.send(
+    process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+    process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+    templateParams,
+    process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+  );
 
   alert("Reservation sent successfully!");
-
 } catch (error) {
   console.error(error);
-  console.log("TEMPLATE ID:", process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
   alert("Something went wrong.");
 }
 
