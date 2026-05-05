@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="min-h-[80vh] flex items-center justify-center bg-black text-white px-6">
       
-      <div className="text-center"> {/* 👈 ADD THIS WRAPPER */}
+      <div className="text-center">
 
         <h1 className="text-5xl md:text-6xl font-bold leading-tight">
           Drunken Monkeys
@@ -18,7 +18,7 @@ export default function Hero() {
             alt="Drunken Monkeys Logo"
           
             className="rounded-full"
-            loading="lazy"
+            loading="eager"
             style={{ height: "auto", width: 'auto' }} 
           />
         </div>
