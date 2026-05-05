@@ -33,6 +33,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
 } catch (error) {
   console.error(error);
+  console.log("TEMPLATE ID:", process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
   alert("Something went wrong.");
 }
 
